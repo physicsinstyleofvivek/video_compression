@@ -20,6 +20,8 @@ pip3 install -r requirements.txt --no-cache-dir
 
 python3 youtube_download.py . "https://youtu.be/pdFXovEXdZk"
 
-python3 compress.py . 2>&1 < /dev/null
+python3 compress.py . > log 2>&1 < /dev/null
+
+printf 'startup-script completed'
 
 

@@ -21,6 +21,8 @@ for file_ in np.sort(glob.glob('*.mp4')):
     cmd = f'ffmpeg -i {infile} -c:v libx265 -crf 34 -preset veryslow -tag:v hvc1 -c:a aac {outfile}'
     subprocess.run(cmd, shell=True).check_returncode()
 
+    print('completed')
+
 
 
 
