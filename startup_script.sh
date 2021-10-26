@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# useful gcloud commands:
+# Useful gcloud commands:
 # gcloud compute instances create instance-3-4 --project=jadusay --zone=us-central1-a --machine-type=e2-micro --metadata-from-file=startup-script=startup_script.sh
 # gcloud compute instances delete instance-3-4 --project=jadusay --zone=us-central1-a --quiet
 # gcloud compute ssh instance-3-4 --project=jadusay --zone=us-central1-a
+# rsync -Pavz $(gcloud compute instances list --project='jadusay' --filter="name=instance-3-4" --format "get(networkInterfaces[0].accessConfigs[0].natIP)"):video_compression/log ./ && tail log
 
 apt update
 apt -y install python3-pip
