@@ -1,12 +1,11 @@
 """Usage:
     nohup python3 compress.py <mp4dir>  > log 2>&1 < /dev/null &
+    python3 compress.py . 2>&1 < /dev/null
 """
 
 import os, glob, subprocess
 import numpy as np
 import sys
-
-print(os.system('tree'))
 
 path = sys.argv[1]
 
